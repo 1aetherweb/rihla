@@ -85,7 +85,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
                   />
                 </div>
                 <div className="pt-3">
-                  <p className="text-xs tracking-wider uppercase text-white/50 mb-1">{p.category}</p>
+                  <p className="text-xs tracking-wider uppercase text-white/50 mb-1">Hoodie</p>
                   <div className="flex justify-between items-baseline">
                     <p className="text-sm font-medium tracking-wide">{p.name}</p>
                     <p className="text-sm text-white/70">${p.price}</p>
