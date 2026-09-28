@@ -44,11 +44,11 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
         </div>
 
         {/* Details */}
-        <div className="flex flex-col justify-center">
-          <p className="text-xs tracking-[0.4em] uppercase text-white/30 mb-3">Hoodie</p>
-          <h1 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4">{product.name}</h1>
-          <p className="text-2xl text-white/80 mb-6">${product.price}</p>
-          <p className="text-white/50 text-sm leading-relaxed mb-8">{product.description}</p>
+        <div className="flex flex-col justify-start pt-4">
+          <p className="text-[10px] tracking-[0.45em] uppercase text-white/25 mb-3">Drop 001 · Hoodie</p>
+          <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tight mb-3">{product.name}</h1>
+          <p className="text-xl text-white/60 mb-5">${product.price}</p>
+          <p className="text-white/40 text-sm leading-relaxed mb-8">{product.description}</p>
 
           {product.sold_out ? (
             <div className="border border-white/10 text-white/30 text-xs tracking-[0.3em] uppercase px-8 py-4 text-center mb-6">
@@ -58,12 +58,27 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <SizeSelector product={product} />
           )}
 
-          <div className="border-t border-white/5 pt-8 mt-4">
-            <div className="flex flex-col gap-3 text-xs tracking-wider text-white/30 uppercase">
-              <p>Free shipping on orders over $150</p>
-              <p>Easy 30-day returns</p>
-              <p>Sizing guide available</p>
-            </div>
+          {/* Materials & Care */}
+          <div className="border-t border-white/5 pt-7 mt-2 mb-7">
+            <p className="text-[10px] tracking-[0.35em] uppercase text-white/25 mb-4">Materials & Care</p>
+            <ul className="flex flex-col gap-2 text-xs text-white/40 leading-relaxed">
+              <li>— 380gsm heavyweight French terry</li>
+              <li>— 100% ring-spun cotton</li>
+              <li>— Dropped shoulder, relaxed fit</li>
+              <li>— Embroidered chest logo</li>
+              <li>— Machine wash cold, tumble dry low</li>
+            </ul>
+          </div>
+
+          {/* Shipping */}
+          <div className="border-t border-white/5 pt-7">
+            <p className="text-[10px] tracking-[0.35em] uppercase text-white/25 mb-4">Shipping & Returns</p>
+            <ul className="flex flex-col gap-2 text-xs text-white/40 leading-relaxed">
+              <li>— Free shipping on orders over $150</li>
+              <li>— Standard delivery 5–8 business days</li>
+              <li>— Easy 30-day returns on unworn items</li>
+              <li>— <Link href="/size-guide" className="underline underline-offset-2 hover:text-white transition-colors">Size guide available</Link></li>
+            </ul>
           </div>
         </div>
       </div>

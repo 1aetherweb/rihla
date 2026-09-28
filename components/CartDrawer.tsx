@@ -1,10 +1,26 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { useCart } from "@/lib/cart";
 
 export default function CartDrawer() {
   const { items, remove, total, count, open, setOpen } = useCart();
+  const [checkingOut, setCheckingOut] = useState(false);
+
+  async function handleCheckout() {
+    const first = items.find((i) => i.product.variantId);
+    if (!first?.product.variantId) return;
+    setCheckingOut(true);
+    try {
+      const { createCheckout } = await import("@/lib/shopify");
+      const url = await createCheckout(first.product.variantId, first.quantity);
+      window.location.href = url;
+    } catch (err) {
+      console.error("Checkout error:", err);
+      setCheckingOut(false);
+    }
+  }
 
   return (
     <>
@@ -72,12 +88,13 @@ export default function CartDrawer() {
               <p className="text-xs tracking-widest uppercase text-white/40">Total</p>
               <p className="text-xl font-black">${total}</p>
             </div>
-            <button className="w-full bg-white text-black text-xs tracking-[0.3em] uppercase py-4 hover:bg-white/90 transition-colors">
-              Checkout
+            <button
+              onClick={handleCheckout}
+              disabled={checkingOut}
+              className="w-full bg-white text-black text-xs tracking-[0.3em] uppercase py-4 hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {checkingOut ? "Redirecting…" : "Checkout"}
             </button>
-            <p className="text-center text-xs text-white/20 tracking-widest uppercase mt-4">
-              Payments coming soon
-            </p>
           </div>
         )}
       </div>
