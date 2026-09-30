@@ -16,7 +16,7 @@ export const products: Product[] = [
     name: "dusk hoodie",
     price: 60,
     tag: "BESTSELLER",
-    image: "https://images.unsplash.com/photo-1542327897-d73f4005b533?w=600&q=80",
+    image: "/products/dusk-2.webp",
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     description: "Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
     variantId: "gid://shopify/ProductVariant/49300744208538",
