@@ -83,12 +83,10 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             {related.map((p) => (
               <Link key={p.id} href={`/product/${p.id}`} className="group block">
                 <div className="relative overflow-hidden bg-[#111] aspect-[3/4]">
-                  <Image
+                  <img
                     src={p.image}
                     alt={p.name}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="33vw"
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="pt-3">
