@@ -29,7 +29,7 @@ export const products: Product[] = [
     price: 60,
     tag: "BESTSELLER",
     image: "/products/dawn-3.webp",
-    images: ["/products/dawn-3.webp", "/products/dawn-5.png", "/products/dawn-4.webp", "/products/dawn-1.png", "/products/dawn-2.png"],
+    images: ["/products/dawn-3.webp", "/products/dawn-5.png", "/products/dawn-4.webp", "/products/dawn-2.png"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     description: "Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
     variantId: "gid://shopify/ProductVariant/49300798701722",
