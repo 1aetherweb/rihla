@@ -34,7 +34,7 @@ export default function Footer() {
           <ul className="flex flex-col gap-2.5 text-xs text-white/50">
             <li><Link href="/contact" className="hover:text-white transition-colors">Contact Us</Link></li>
             <li>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <a href="https://instagram.com/rihlaapparel" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                 Instagram
               </a>
             </li>

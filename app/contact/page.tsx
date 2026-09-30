@@ -10,16 +10,20 @@ export default function ContactPage() {
       </p>
 
       <div className="flex flex-col gap-4 mb-16">
-        <div className="border border-white/5 p-6">
+        <a href="mailto:info@rihlaapparel" className="border border-white/5 p-6 hover:border-white/20 transition-colors">
           <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-2">Email</p>
-          <p className="text-sm text-white/60">contact@rihla.com</p>
+          <p className="text-sm text-white/60">info@rihlaapparel</p>
           <p className="text-xs text-white/25 mt-1">Response within 24 hours</p>
-        </div>
-        <div className="border border-white/5 p-6">
+        </a>
+        <a href="https://instagram.com/rihlaapparel" target="_blank" rel="noopener noreferrer" className="border border-white/5 p-6 hover:border-white/20 transition-colors">
           <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-2">Instagram</p>
-          <p className="text-sm text-white/60">@rihla</p>
+          <p className="text-sm text-white/60">@rihlaapparel</p>
           <p className="text-xs text-white/25 mt-1">DMs open</p>
-        </div>
+        </a>
+        <a href="https://tiktok.com/@rihlaapparel" target="_blank" rel="noopener noreferrer" className="border border-white/5 p-6 hover:border-white/20 transition-colors">
+          <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-2">TikTok</p>
+          <p className="text-sm text-white/60">@rihlaapparel</p>
+        </a>
       </div>
 
       <div className="border-t border-white/5 pt-8">
