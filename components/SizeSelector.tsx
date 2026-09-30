@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/products";
 
@@ -32,7 +33,12 @@ export default function SizeSelector({ product }: { product: Product }) {
 
   return (
     <div className="mb-8">
-      <p className="text-xs tracking-widest uppercase text-white/40 mb-3">Size</p>
+      <div className="flex items-center justify-between mb-3">
+        <p className="text-xs tracking-widest uppercase text-white/40">Size</p>
+        <Link href="/size-guide" className="text-[10px] tracking-[0.25em] uppercase text-white/30 hover:text-white transition-colors underline underline-offset-2">
+          Size Guide
+        </Link>
+      </div>
       <div className="flex gap-2 flex-wrap mb-6">
         {product.sizes.map((size) => (
           <button

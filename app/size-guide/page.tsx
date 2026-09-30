@@ -1,12 +1,11 @@
 ﻿import Link from "next/link";
 
 const SIZES = [
-  { size: "XS", chest: "34–36", shoulder: "16.5", length: "26", sleeve: "24" },
-  { size: "S",  chest: "36–38", shoulder: "17.5", length: "27", sleeve: "24.5" },
-  { size: "M",  chest: "38–40", shoulder: "18.5", length: "28", sleeve: "25" },
-  { size: "L",  chest: "40–42", shoulder: "19.5", length: "29", sleeve: "25.5" },
-  { size: "XL", chest: "42–44", shoulder: "20.5", length: "30", sleeve: "26" },
-  { size: "XXL",chest: "44–46", shoulder: "21.5", length: "31", sleeve: "26.5" },
+  { size: "XS",  chest: "22.5", length: "23", sleeve: "22", shoulder: "20" },
+  { size: "S",   chest: "24",   length: "24", sleeve: "23", shoulder: "21" },
+  { size: "M",   chest: "25.5", length: "25", sleeve: "24", shoulder: "22" },
+  { size: "L",   chest: "27",   length: "26", sleeve: "25", shoulder: "23" },
+  { size: "XL",  chest: "28.5", length: "27", sleeve: "26", shoulder: "24" },
 ];
 
 export default function SizeGuidePage() {
