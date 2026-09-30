@@ -21,19 +21,24 @@ export default function SizeGuidePage() {
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="border-b border-white/10">
-              {["Size", "Chest", "Shoulder", "Length", "Sleeve"].map((h) => (
-                <th key={h} className="text-[9px] tracking-[0.4em] uppercase text-white/25 pb-4 pr-8 font-normal">{h}</th>
+              <th className="text-[9px] tracking-[0.4em] uppercase text-white/25 pb-4 pr-8 font-normal w-28"></th>
+              {SIZES.map((s) => (
+                <th key={s.size} className="text-[9px] tracking-[0.4em] uppercase text-white/25 pb-4 pr-8 font-normal">{s.size}</th>
               ))}
             </tr>
           </thead>
           <tbody>
-            {SIZES.map((row, i) => (
-              <tr key={row.size} className={`border-b border-white/5 ${i % 2 === 0 ? "" : "bg-white/[0.02]"}`}>
-                <td className="py-4 pr-8 text-sm font-black uppercase tracking-wider">{row.size}</td>
-                <td className="py-4 pr-8 text-sm text-white/50">{row.chest}"</td>
-                <td className="py-4 pr-8 text-sm text-white/50">{row.shoulder}"</td>
-                <td className="py-4 pr-8 text-sm text-white/50">{row.length}"</td>
-                <td className="py-4 pr-8 text-sm text-white/50">{row.sleeve}"</td>
+            {[
+              { label: "Chest", key: "chest" },
+              { label: "Length", key: "length" },
+              { label: "Sleeve", key: "sleeve" },
+              { label: "Shoulder", key: "shoulder" },
+            ].map(({ label, key }, i) => (
+              <tr key={label} className={`border-b border-white/5 ${i % 2 === 0 ? "" : "bg-white/[0.02]"}`}>
+                <td className="py-4 pr-8 text-xs font-medium uppercase tracking-wider text-white/60">{label}</td>
+                {SIZES.map((s) => (
+                  <td key={s.size} className="py-4 pr-8 text-sm text-white/50">{s[key as keyof typeof s]}</td>
+                ))}
               </tr>
             ))}
           </tbody>
