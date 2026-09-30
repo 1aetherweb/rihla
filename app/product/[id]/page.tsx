@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { products } from "@/lib/products";
 import SizeSelector from "@/components/SizeSelector";
+import ProductGallery from "@/components/ProductGallery";
 
 export function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
@@ -27,21 +28,12 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
       </nav>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-20">
-        {/* Image */}
-        <div className="relative aspect-[3/4] bg-[#111]">
-          <Image
-            src={product.image}
-            alt={product.name}
-            fill
-            className="object-cover"
-            priority
-          />
-          {product.tag && (
-            <span className="absolute top-4 left-4 text-[10px] tracking-widest uppercase bg-white text-black px-2 py-1 font-bold">
-              {product.tag}
-            </span>
-          )}
-        </div>
+        {/* Image gallery */}
+        <ProductGallery
+          images={product.images ?? [product.image]}
+          name={product.name}
+          tag={product.tag}
+        />
 
         {/* Details */}
         <div className="flex flex-col justify-start pt-4">

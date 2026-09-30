@@ -11,7 +11,9 @@
       "Bash(python3 -c ' *)",
       "Bash(powershell -command 'Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\('\\\\''C:\\\\Users\\\\fayzs\\\\OneDrive\\\\Fayzy\\\\Websites\\\\rihla\\\\public\\\\hero.jpg'\\\\''\\); Write-Host $img.Width $img.Height; $img.Dispose\\(\\)')",
       "Bash(python3 -c \"from PIL import Image; img = Image.open\\('C:/Users/fayzs/OneDrive/Fayzy/Websites/rihla/public/hero.jpg'\\); print\\(img.size\\)\")",
-      "Bash(git add *)"
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)"
     ]
   }
 }
