@@ -2,6 +2,8 @@
 import Link from "next/link";
 
 const SHOTS = [
+  "/lookbook/new-group.jpg",
+  "/lookbook/24.jpg",
   "/lookbook/7.jpg",
   "/lookbook/8.jpg",
   "/lookbook/9.jpg",
@@ -19,7 +21,6 @@ const SHOTS = [
   "/lookbook/21.jpg",
   "/lookbook/22.jpg",
   "/lookbook/23.jpg",
-  "/lookbook/24.jpg",
   "/lookbook/25.jpg",
 ];
 
