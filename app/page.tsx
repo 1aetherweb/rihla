@@ -9,7 +9,26 @@ export default function Home() {
     <>
 
       {/* Hero */}
-      <section className="w-full h-screen bg-black" />
+      <section className="relative w-full h-screen overflow-hidden bg-black">
+        <img
+          src="/hero.jpg"
+          alt="Rihla"
+          className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+        <div className="absolute bottom-14 left-6 md:left-12 z-10 max-w-xl">
+          <h1 className="text-5xl md:text-8xl font-black uppercase leading-[0.88] tracking-tight text-white mb-5">
+            Every Road<br />Leads Here.
+          </h1>
+          <p className="text-sm text-white/60 mb-8">Drop 001 — Now Available.</p>
+          <a
+            href="/shop"
+            className="inline-block bg-white text-black text-xs tracking-[0.3em] uppercase px-8 py-4 hover:bg-white/90 transition-colors font-medium"
+          >
+            Shop Now
+          </a>
+        </div>
+      </section>
 
       {/* Announcement ticker */}
       <div className="overflow-hidden border-b border-white/5 bg-[#0a0a0a] py-2.5">
