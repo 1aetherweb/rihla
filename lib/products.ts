@@ -26,7 +26,7 @@ export const products: Product[] = [
     name: "dawn hoodie",
     price: 60,
     tag: "BESTSELLER",
-    image: "https://images.unsplash.com/photo-1542327897-d73f4005b533?w=600&q=80",
+    image: "/products/dawn-4.webp",
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     description: "Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
     variantId: "gid://shopify/ProductVariant/49300798701722",
