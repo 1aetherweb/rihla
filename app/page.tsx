@@ -1,7 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
-import ProductCard from "@/components/ProductCard";
-import { products } from "@/lib/products";
 
 export default function Home() {
   return (
@@ -25,43 +22,6 @@ export default function Home() {
           >
             Shop Now
           </a>
-        </div>
-      </section>
-
-      {/* Featured products */}
-      <section className="max-w-7xl mx-auto px-5 md:px-10 pt-24 pb-28">
-        <div className="flex items-baseline justify-between mb-10">
-          <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight">Presence Hoodie</h2>
-          <Link href="/shop" className="text-xs tracking-[0.3em] uppercase text-white/40 hover:text-white transition-colors">
-            Shop All
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          {products.map((product) => (
-            <ProductCard key={product.id} product={product} />
-          ))}
-        </div>
-      </section>
-
-      {/* Lookbook banner — real brand photo */}
-      <section className="relative h-[70vh] overflow-hidden">
-        <img
-          src="/lookbook/13.jpg"
-          alt="Rihla Lookbook"
-          className="absolute inset-0 w-full h-full object-cover object-top"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 gap-7">
-          <p className="text-[10px] tracking-[0.55em] uppercase text-white/40">SS26 Lookbook</p>
-          <h2 className="text-5xl md:text-7xl font-black uppercase leading-[0.9] tracking-tight text-white">
-            Dress the<br />Voyage
-          </h2>
-          <Link
-            href="/lookbook"
-            className="border border-white text-white text-[10px] tracking-[0.4em] uppercase px-10 py-3.5 hover:bg-white hover:text-black transition-colors duration-300 mt-2"
-          >
-            View Lookbook
-          </Link>
         </div>
       </section>
 
