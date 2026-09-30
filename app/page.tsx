@@ -21,14 +21,8 @@ export default function Home() {
       </section>
 
       {/* Lookbook banner */}
-      <section className="relative h-[55vh] overflow-hidden">
-        <img
-          src="/hero.jpg"
-          alt="Rihla Lookbook"
-          className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
-        />
-        <div className="absolute inset-0 bg-black/50" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 gap-7">
+      <section className="relative h-[55vh] bg-black flex flex-col items-center justify-center text-center px-6 gap-7">
+        <div className="flex flex-col items-center justify-center text-center px-6 gap-7">
           <p className="text-[10px] tracking-[0.55em] uppercase text-white/40">SS26 Lookbook</p>
           <h2 className="text-5xl md:text-7xl font-black uppercase leading-[0.9] tracking-tight text-white">
             Dress the<br />Voyage
@@ -41,6 +35,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
 
       {/* Brand statement */}
       <section className="max-w-5xl mx-auto px-5 md:px-10 py-28 text-center">
