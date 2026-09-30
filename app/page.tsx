@@ -21,7 +21,8 @@ export default function Home() {
       </section>
 
       {/* Lookbook banner */}
-      <section className="relative h-[70vh] overflow-hidden">
+      <section className="max-w-7xl mx-auto px-5 md:px-10 pb-20">
+      <div className="relative h-[340px] md:h-[420px] overflow-hidden">
         <img
           src="/lookbook/13.jpg"
           alt="Rihla Lookbook"
@@ -40,6 +41,7 @@ export default function Home() {
             View Lookbook
           </Link>
         </div>
+      </div>
       </section>
 
       {/* Brand statement */}
