@@ -21,12 +21,11 @@ export default function Home() {
       </section>
 
       {/* Lookbook banner */}
-      <section className="max-w-7xl mx-auto px-5 md:px-10 pb-20">
-      <div className="relative h-[340px] md:h-[420px] overflow-hidden">
+      <section className="relative h-[55vh] overflow-hidden">
         <img
-          src="/lookbook/13.jpg"
+          src="/hero.jpg"
           alt="Rihla Lookbook"
-          className="absolute inset-0 w-full h-full object-cover object-top"
+          className="absolute inset-0 w-full h-full object-cover object-[center_45%]"
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 gap-7">
@@ -41,7 +40,6 @@ export default function Home() {
             View Lookbook
           </Link>
         </div>
-      </div>
       </section>
 
       {/* Brand statement */}
