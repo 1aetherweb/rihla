@@ -59,38 +59,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Instagram reel */}
-      <section className="max-w-7xl mx-auto px-5 py-20">
-        <div className="flex flex-col md:flex-row gap-12 items-center">
-          <div className="shrink-0 flex justify-center w-full md:w-auto">
-            <iframe
-              src="https://www.instagram.com/p/Ddz1P3zPT3o/embed/"
-              width="400"
-              height="500"
-              frameBorder="0"
-              scrolling="no"
-              allowTransparency
-              allow="encrypted-media"
-              className="max-w-full"
-            />
-          </div>
-          <div>
-            <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 mb-3">@rihlaapparel</p>
-            <h2 className="text-3xl md:text-4xl font-black uppercase tracking-tight mb-4 leading-tight">
-              Follow the<br />journey.
-            </h2>
-            <a
-              href="https://instagram.com/rihlaapparel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[10px] tracking-[0.35em] uppercase text-white/50 hover:text-white transition-colors border-b border-white/20 hover:border-white pb-0.5"
-            >
-              Instagram →
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* Brand statement */}
       <section className="max-w-7xl mx-auto px-5 py-24 flex flex-col md:flex-row gap-10 md:gap-24 items-start">
         <p className="text-[9px] tracking-[0.4em] uppercase text-white/20 shrink-0 pt-1">About</p>
