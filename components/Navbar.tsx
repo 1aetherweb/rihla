@@ -60,19 +60,34 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Cart */}
-          <button
-            onClick={() => setOpen(true)}
-            aria-label="Open cart"
-            className="flex items-center gap-1.5 text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-200"
-          >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <path d="M16 10a4 4 0 01-8 0" />
-            </svg>
-            {count > 0 && <span>{count}</span>}
-          </button>
+          {/* Help dropdown + Cart */}
+          <div className="flex items-center gap-5">
+            <div className="relative group hidden md:block">
+              <button className="text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-200">
+                Help
+              </button>
+              <div className="absolute right-0 top-full mt-3 w-44 bg-black border border-white/10 flex flex-col py-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50">
+                <Link href="/contact" className="px-5 py-3 text-[11px] tracking-[0.15em] uppercase text-white/50 hover:text-white hover:bg-white/5 transition-colors">
+                  Contact Us
+                </Link>
+                <Link href="/shipping" className="px-5 py-3 text-[11px] tracking-[0.15em] uppercase text-white/50 hover:text-white hover:bg-white/5 transition-colors">
+                  Returns & Shipping
+                </Link>
+              </div>
+            </div>
+            <button
+              onClick={() => setOpen(true)}
+              aria-label="Open cart"
+              className="flex items-center gap-1.5 text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-200"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
+              </svg>
+              {count > 0 && <span>{count}</span>}
+            </button>
+          </div>
         </div>
       </header>
 
