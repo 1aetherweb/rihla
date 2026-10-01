@@ -19,7 +19,7 @@ export default function ProductGallery({ images, name, tag }: { images: string[]
                 i === active ? "border-white" : "border-transparent opacity-40 hover:opacity-70"
               }`}
             >
-              <img src={src} alt={`${name} ${i + 1}`} className="absolute inset-0 w-full h-full object-cover" />
+              <img src={src} alt={`${name} ${i + 1}`} className="absolute inset-0 w-full h-full object-cover object-top" />
             </button>
           ))}
         </div>
@@ -30,7 +30,7 @@ export default function ProductGallery({ images, name, tag }: { images: string[]
         <img
           src={images[active]}
           alt={name}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover object-top"
         />
         {tag && (
           <span className="absolute top-4 left-4 text-[10px] tracking-widest uppercase bg-white text-black px-2 py-1 font-bold">
