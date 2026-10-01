@@ -16,15 +16,15 @@ export default function AboutPage() {
       {/* Story */}
       <section className="max-w-2xl mx-auto px-6 py-24">
         <div className="flex flex-col gap-6 text-white/60 text-base leading-relaxed">
-          <p>rihla means journey.</p>
-          <p>but a journey isn't always about where you're going.</p>
-          <p>sometimes it's about where you've been, what you've learned, what you've lost, what you've gained, and who you're becoming along the way.</p>
-          <p>rihla was built around that idea.</p>
-          <p>a reminder to keep moving, keep growing, and keep your faith through every part of it.</p>
-          <p>our pieces are made to be worn through the everyday — the long nights, early mornings, new beginnings, quiet moments, and everything in between.</p>
-          <p>there's no perfect way to journey.</p>
-          <p>there's just yours.</p>
-          <p className="text-white font-bold">our journey is your journey.</p>
+          <p>Rihla means journey.</p>
+          <p>But a journey isn't always about where you're going.</p>
+          <p>Sometimes it's about where you've been, what you've learned, what you've lost, what you've gained, and who you're becoming along the way.</p>
+          <p>Rihla was built around that idea.</p>
+          <p>A reminder to keep moving, keep growing, and keep your faith through every part of it.</p>
+          <p>Our pieces are made to be worn through the everyday — the long nights, early mornings, new beginnings, quiet moments, and everything in between.</p>
+          <p>There's no perfect way to journey.</p>
+          <p>There's just yours.</p>
+          <p className="text-white font-bold">Our journey is your journey.</p>
         </div>
       </section>
 
