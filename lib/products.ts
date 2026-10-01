@@ -18,7 +18,7 @@ export const products: Product[] = [
     price: 60,
     tag: "BESTSELLER",
     image: "/products/dusk-2.webp",
-    images: ["/products/dusk-2.webp", "/products/dusk-1.png", "/products/dusk-3.jpg"],
+    images: ["/products/dusk-2.webp", "/products/dusk-1.png", "/products/dusk-3.jpg", "/products/dusk-4.png"],
     sizes: ["XS", "S", "M", "L", "XL", "XXL"],
     description: "Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
     variantId: "gid://shopify/ProductVariant/49300744208538",
