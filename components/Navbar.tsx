@@ -31,7 +31,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-black border-b border-white/8" : "bg-transparent"}`}>
+      <header className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-white/8">
         <div className="max-w-7xl mx-auto px-5 h-14 flex items-center justify-between">
           {/* Hamburger — mobile only */}
           <button
@@ -44,11 +44,13 @@ export default function Navbar() {
           </button>
 
           {/* Logo */}
-          <Link
-            href="/"
-            className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-sm font-black tracking-[0.35em] uppercase"
-          >
-            RIHLA
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
+            <img
+              src="/logo.jpg"
+              alt="Rihla"
+              className="h-8 w-auto"
+              style={{ filter: "invert(1)", mixBlendMode: "screen" }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -95,8 +97,8 @@ export default function Navbar() {
       {menuOpen && (
         <div className="fixed inset-0 z-[60] bg-black flex flex-col">
           <div className="flex items-center justify-between px-5 h-14 border-b border-white/5">
-            <Link href="/" className="text-sm font-black tracking-[0.35em] uppercase" onClick={() => setMenuOpen(false)}>
-              RIHLA
+            <Link href="/" onClick={() => setMenuOpen(false)}>
+              <img src="/logo.jpg" alt="Rihla" className="h-8 w-auto" style={{ filter: "invert(1)", mixBlendMode: "screen" }} />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
