@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero — full-bleed photo with tint */}
-      <section className="relative w-full h-screen flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+      <section className="relative w-full h-screen flex flex-col justify-end px-8 md:px-16 pb-16 overflow-hidden">
         <img src="/hero.jpg" alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-black/72" />
         <div className="relative z-10">
