@@ -44,13 +44,8 @@ export default function Navbar() {
           </button>
 
           {/* Logo */}
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0">
-            <img
-              src="/logo.png"
-              alt="Rihla"
-              className="h-10 w-auto"
-              style={{ filter: "brightness(0) invert(1)" }}
-            />
+          <Link href="/" className="absolute left-1/2 -translate-x-1/2 md:static md:translate-x-0 text-sm font-black tracking-[0.35em] uppercase">
+            RIHLA
           </Link>
 
           {/* Desktop nav */}
@@ -101,7 +96,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-[60] bg-black flex flex-col">
           <div className="flex items-center justify-between px-5 h-14 border-b border-white/5">
             <Link href="/" onClick={() => setMenuOpen(false)}>
-              <img src="/logo.png" alt="Rihla" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} className="h-10 w-auto" />
+              RIHLA
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
