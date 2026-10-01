@@ -69,6 +69,9 @@ export default function Navbar() {
                 Help
               </button>
               <div className="absolute right-0 top-full pt-3 w-44 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50"><div className="bg-black border border-white/10 flex flex-col py-2">
+                <Link href="/faq" className="px-5 py-3 text-[11px] tracking-[0.15em] text-white/50 hover:text-white hover:bg-white/5 transition-colors">
+                  FAQ
+                </Link>
                 <Link href="/contact" className="px-5 py-3 text-[11px] tracking-[0.15em] text-white/50 hover:text-white hover:bg-white/5 transition-colors">
                   Contact Us
                 </Link>

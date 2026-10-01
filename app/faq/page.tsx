@@ -1,31 +1,35 @@
 ﻿const FAQS = [
   {
     q: "When will my order ship?",
-    a: "Orders ship within 2–4 business days. You'll receive a tracking number via email once your order is on the way.",
+    a: "Orders are typically processed within 2–5 business days after your order is placed. Once your order ships, you'll receive a tracking number by email.",
   },
   {
-    q: "Do you ship internationally?",
-    a: "Currently we ship within the US and Canada. International shipping is coming soon.",
+    q: "Where do you ship from?",
+    a: "All Rihla orders are packed and shipped from the United States.",
   },
   {
     q: "What's your return policy?",
-    a: "We accept returns on unworn, unwashed items within 30 days of delivery. Items must be in original condition with tags attached.",
+    a: "You can request a return within 14 days of delivery. Items must be unworn, unwashed, in their original condition, and returned with original tags attached. Sale and limited-drop items may be final sale.",
   },
   {
-    q: "How do I know my size?",
-    a: "Our hoodies are cut with a relaxed, dropped-shoulder fit. Check the size guide for full measurements. If you're between sizes, size down for a more fitted look.",
+    q: "Who pays for return shipping?",
+    a: "Customers are responsible for return shipping costs unless the item arrived damaged or we made an error with your order.",
   },
   {
-    q: "Will sold-out items restock?",
-    a: "We operate in limited drops. Once a colorway is gone, it's gone. Follow us on Instagram to be notified about new drops.",
+    q: "My item arrived damaged — what do I do?",
+    a: "Contact us at info@rihlaapparel.com within 7 days of delivery with your order number and a photo of the item. We'll take care of it.",
   },
   {
     q: "Can I change or cancel my order?",
-    a: "Orders can be changed or cancelled within 12 hours of placement. Contact us at contact@rihla.com as soon as possible.",
+    a: "Reach out to us at info@rihlaapparel.com as soon as possible. We'll do our best to catch it before it ships.",
   },
   {
-    q: "What material are the hoodies made from?",
-    a: "380gsm heavyweight French terry, 100% ring-spun cotton. Built to last.",
+    q: "Will sold-out items restock?",
+    a: "We operate in limited drops. Once a colorway is gone, it's gone. Follow us on Instagram @rihlaapparel to stay updated on new drops.",
+  },
+  {
+    q: "How do I know my size?",
+    a: "Our hoodies are cut with a relaxed, dropped-shoulder fit. Check the size guide for full measurements.",
   },
 ];
 

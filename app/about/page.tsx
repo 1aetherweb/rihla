@@ -14,7 +14,7 @@ export default function AboutPage() {
       </section>
 
       {/* Story */}
-      <section className="max-w-2xl mx-auto px-6 py-24 text-center">
+      <section className="max-w-2xl mx-auto px-6 pt-10 pb-24 text-center">
         <div className="flex flex-col gap-6 text-white/60 text-base leading-relaxed">
           <p>Rihla means journey.</p>
           <p>But a journey isn't always about where you're going.</p>
