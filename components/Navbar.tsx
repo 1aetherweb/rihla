@@ -68,14 +68,14 @@ export default function Navbar() {
               <button className="text-[11px] tracking-[0.2em] uppercase text-white/50 hover:text-white transition-colors duration-200">
                 Help
               </button>
-              <div className="absolute right-0 top-full mt-3 w-44 bg-black border border-white/10 flex flex-col py-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50">
+              <div className="absolute right-0 top-full pt-3 w-44 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 z-50"><div className="bg-black border border-white/10 flex flex-col py-2">
                 <Link href="/contact" className="px-5 py-3 text-[11px] tracking-[0.15em] uppercase text-white/50 hover:text-white hover:bg-white/5 transition-colors">
                   Contact Us
                 </Link>
                 <Link href="/shipping" className="px-5 py-3 text-[11px] tracking-[0.15em] uppercase text-white/50 hover:text-white hover:bg-white/5 transition-colors">
                   Returns & Shipping
                 </Link>
-              </div>
+              </div></div>
             </div>
             <button
               onClick={() => setOpen(true)}
