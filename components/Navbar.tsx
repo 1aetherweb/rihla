@@ -49,7 +49,7 @@ export default function Navbar() {
               src="/logo.png"
               alt="Rihla"
               className="h-10 w-auto"
-              style={{ filter: "invert(1)" }}
+              style={{ filter: "brightness(0) invert(1)" }}
             />
           </Link>
 
@@ -101,7 +101,7 @@ export default function Navbar() {
         <div className="fixed inset-0 z-[60] bg-black flex flex-col">
           <div className="flex items-center justify-between px-5 h-14 border-b border-white/5">
             <Link href="/" onClick={() => setMenuOpen(false)}>
-              <img src="/logo.png" alt="Rihla" className="h-8 w-auto" style={{ filter: "invert(1)" }} className="h-10 w-auto" />
+              <img src="/logo.png" alt="Rihla" className="h-8 w-auto" style={{ filter: "brightness(0) invert(1)" }} className="h-10 w-auto" />
             </Link>
             <button
               onClick={() => setMenuOpen(false)}
