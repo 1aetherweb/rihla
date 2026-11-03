@@ -7,7 +7,7 @@ export default function Home() {
       {/* Hero — full-bleed photo with tint */}
       <section className="relative w-full h-screen flex flex-col justify-end px-8 md:px-16 pb-16 overflow-hidden">
         <img src="/hero.webp" alt="" className="absolute inset-0 w-full h-full object-cover object-center" />
-        <div className="absolute inset-0 bg-black/72" />
+        <div className="absolute inset-0 bg-black/45" />
         <div className="relative z-10">
           <h1 className="text-6xl md:text-[7rem] font-black uppercase leading-[0.85] tracking-tight text-white mb-6">
             Every Journey<br />Leads Here.
