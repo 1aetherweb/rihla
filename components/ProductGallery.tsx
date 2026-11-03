@@ -26,7 +26,7 @@ export default function ProductGallery({ images, name, tag }: { images: string[]
       )}
 
       {/* Main image */}
-      <div className="relative flex-1 aspect-[3/4] bg-[#111] overflow-hidden">
+      <div className="relative flex-1 aspect-[3/4] bg-black overflow-hidden">
         <img
           src={images[active]}
           alt={name}

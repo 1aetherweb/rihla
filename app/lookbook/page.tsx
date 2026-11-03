@@ -37,7 +37,7 @@ export default function LookbookPage() {
       <section className="max-w-7xl mx-auto px-5 pb-32">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-1">
           {SHOTS.map((src) => (
-            <div key={src} className="relative aspect-[3/4] overflow-hidden bg-[#111]">
+            <div key={src} className="relative aspect-[3/4] overflow-hidden bg-black">
               <img
                 src={src}
                 alt=""

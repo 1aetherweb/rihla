@@ -36,7 +36,7 @@ export default function CartDrawer() {
 
       {/* Drawer */}
       <div
-        className={`fixed top-0 right-0 h-full w-full max-w-sm z-50 bg-[#0e0e0e] border-l border-white/5 flex flex-col transition-transform duration-300 ${
+        className={`fixed top-0 right-0 h-full w-full max-w-sm z-50 bg-black border-l border-white/5 flex flex-col transition-transform duration-300 ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -60,7 +60,7 @@ export default function CartDrawer() {
             <ul className="flex flex-col gap-6">
               {items.map((item) => (
                 <li key={`${item.product.id}-${item.size}`} className="flex gap-4">
-                  <div className="relative w-20 h-24 bg-[#111] flex-shrink-0">
+                  <div className="relative w-20 h-24 bg-black flex-shrink-0">
                     <Image src={item.product.image} alt={item.product.name} fill className="object-cover" sizes="80px" />
                   </div>
                   <div className="flex-1 min-w-0">
