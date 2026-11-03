@@ -22,10 +22,20 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Lookbook banner */}
-      <section className="relative h-[55vh] bg-black flex flex-col items-center justify-center text-center px-6 gap-7">
-        <div className="flex flex-col items-center justify-center text-center px-6 gap-7">
-          <p className="text-[10px] tracking-[0.55em] uppercase text-white/40">SS26 Lookbook</p>
+      {/* Lookbook banner — video background */}
+      <section className="relative h-screen bg-black flex flex-col items-center justify-center text-center px-6 overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/lookbook-video.mov" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center gap-7">
+          <p className="text-[10px] tracking-[0.55em] uppercase text-white/50">SS26 Lookbook</p>
           <h2 className="text-5xl md:text-7xl font-black uppercase leading-[0.9] tracking-tight text-white">
             Dress the<br />Voyage
           </h2>
