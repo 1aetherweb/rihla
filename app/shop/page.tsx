@@ -13,7 +13,7 @@ export default function ShopPage() {
         <p className="text-[10px] tracking-[0.3em] uppercase text-white/25">
           {products.length} styles
         </p>
-        <p className="text-[10px] tracking-[0.3em] uppercase text-white/25">All $60</p>
+        <p className="text-[10px] tracking-[0.3em] uppercase text-white/25">All $64.99</p>
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
