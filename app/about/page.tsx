@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="max-w-2xl mx-auto px-6 pb-28">
+      <section className="max-w-2xl mx-auto px-6 pb-28 flex justify-center">
         <Link
           href="/shop"
           className="inline-block bg-white text-black text-xs tracking-[0.35em] uppercase px-10 py-4 hover:bg-white/90 transition-colors font-semibold"
