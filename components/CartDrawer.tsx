@@ -9,12 +9,14 @@ export default function CartDrawer() {
   const [checkingOut, setCheckingOut] = useState(false);
 
   async function handleCheckout() {
-    const first = items.find((i) => i.product.variantId);
-    if (!first?.product.variantId) return;
+    const lines = items
+      .filter((i) => i.product.variantId)
+      .map((i) => ({ variantId: i.product.variantId!, quantity: i.quantity }));
+    if (lines.length === 0) return;
     setCheckingOut(true);
     try {
       const { createCheckout } = await import("@/lib/shopify");
-      const url = await createCheckout(first.product.variantId, first.quantity);
+      const url = await createCheckout(lines);
       window.location.href = url;
     } catch (err) {
       console.error("Checkout error:", err);

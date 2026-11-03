@@ -55,7 +55,7 @@ export async function getProducts() {
   }));
 }
 
-export async function createCheckout(variantId: string, quantity: number) {
+export async function createCheckout(lines: { variantId: string; quantity: number }[]) {
   const query = `
     mutation cartCreate($input: CartInput!) {
       cartCreate(input: $input) {
@@ -73,7 +73,7 @@ export async function createCheckout(variantId: string, quantity: number) {
   const { data, errors } = await shopify.request(query, {
     variables: {
       input: {
-        lines: [{ quantity, merchandiseId: variantId }]
+        lines: lines.map((l) => ({ quantity: l.quantity, merchandiseId: l.variantId }))
       }
     }
   });

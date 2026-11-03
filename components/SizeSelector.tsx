@@ -23,7 +23,7 @@ export default function SizeSelector({ product }: { product: Product }) {
     setCheckingOut(true);
     try {
       const { createCheckout } = await import("@/lib/shopify");
-      const url = await createCheckout(product.variantId, 1);
+      const url = await createCheckout([{ variantId: product.variantId!, quantity: 1 }]);
       window.location.href = url;
     } catch (err) {
       console.error("Checkout error:", err);
