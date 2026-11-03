@@ -10,6 +10,7 @@
           <p className="text-[10px] tracking-[0.4em] uppercase text-white/25 mb-5">Shipping</p>
           <div className="flex flex-col gap-4">
             <p>All Rihla orders are packed and shipped from the United States.</p>
+            <p>Free shipping on orders over $130.</p>
             <p>Orders are typically processed within 2–5 business days after your order is placed. Once your order ships, you'll receive a tracking number by email.</p>
             <p>Shipping times may vary depending on your location and carrier. Rihla is not responsible for delays caused by the shipping carrier, weather, holidays, or other circumstances outside of our control.</p>
             <p>Please make sure your shipping address is correct before placing your order. We are not responsible for orders shipped to an incorrect address provided at checkout.</p>

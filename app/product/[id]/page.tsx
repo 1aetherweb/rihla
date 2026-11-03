@@ -14,8 +14,6 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const product = products.find((p) => p.id === id);
   if (!product) notFound();
 
-  const related = products.filter((p) => p.id !== product.id).slice(0, 3);
-
   return (
     <div className="max-w-7xl mx-auto px-6 pt-28 pb-24">
       {/* Breadcrumb */}
@@ -54,11 +52,11 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <div className="border-t border-white/5 pt-7 mt-2 mb-7">
             <p className="text-[10px] tracking-[0.35em] uppercase text-white/25 mb-4">Materials & Care</p>
             <ul className="flex flex-col gap-2 text-xs text-white/40 leading-relaxed">
-              <li>— 380gsm heavyweight French terry</li>
-              <li>— 100% ring-spun cotton</li>
-              <li>— Dropped shoulder, relaxed fit</li>
-              <li>— Embroidered chest logo</li>
-              <li>— Machine wash cold, tumble dry low</li>
+              <li>— {product.description}</li>
+              <li>— Hand wash cold</li>
+              <li>— Do not bleach</li>
+              <li>— Lay flat to dry</li>
+              <li>— Cool iron if needed</li>
             </ul>
           </div>
 
@@ -66,41 +64,15 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
           <div className="border-t border-white/5 pt-7">
             <p className="text-[10px] tracking-[0.35em] uppercase text-white/25 mb-4">Shipping & Returns</p>
             <ul className="flex flex-col gap-2 text-xs text-white/40 leading-relaxed">
-              <li>— Free shipping on orders over $150</li>
-              <li>— Standard delivery 5–8 business days</li>
-              <li>— Easy 30-day returns on unworn items</li>
+              <li>— Free shipping on orders over $130</li>
+              <li>— Standard delivery 2–5 business days</li>
+              <li>— Returns within 14 days on unworn items</li>
               <li>— <Link href="/size-guide" className="underline underline-offset-2 hover:text-white transition-colors">Size guide available</Link></li>
             </ul>
           </div>
         </div>
       </div>
 
-      {/* Related */}
-      {related.length > 0 && (
-        <div className="mt-24">
-          <h2 className="text-xl font-black uppercase tracking-[0.2em] mb-8">You May Also Like</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6">
-            {related.map((p) => (
-              <Link key={p.id} href={`/product/${p.id}`} className="group block">
-                <div className="relative overflow-hidden bg-[#111] aspect-[3/4]">
-                  <img
-                    src={p.image}
-                    alt={p.name}
-                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="pt-3">
-                  <p className="text-xs tracking-wider uppercase text-white/50 mb-1">Hoodie</p>
-                  <div className="flex justify-between items-baseline">
-                    <p className="text-sm font-medium tracking-wide">{p.name}</p>
-                    <p className="text-sm text-white/70">${p.price}</p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-        </div>
-      )}
     </div>
   );
 }
