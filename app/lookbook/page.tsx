@@ -47,15 +47,15 @@ export default function LookbookPage() {
           ))}
         </div>
 
-        <div className="mt-16 bg-[#e0e0e0] flex flex-col items-center justify-center text-black py-20 text-center">
-          <p className="text-[9px] tracking-[0.5em] uppercase text-black/30 mb-4">Drop 001</p>
+        <div className="mt-16 bg-[#111] flex flex-col items-center justify-center text-white py-20 text-center">
+          <p className="text-[9px] tracking-[0.5em] uppercase text-white/30 mb-4">Drop 001</p>
           <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4">
             Presence<br />Hoodie
           </h2>
-          <p className="text-sm text-black/40 mb-10">3 colorways · $64.99</p>
+          <p className="text-sm text-white/40 mb-10">3 colorways · $64.99</p>
           <Link
             href="/shop"
-            className="bg-black text-white text-[10px] tracking-[0.35em] uppercase px-12 py-4 hover:bg-black/80 transition-colors"
+            className="bg-white text-black text-[10px] tracking-[0.35em] uppercase px-12 py-4 hover:bg-white/90 transition-colors"
           >
             Shop Now
           </Link>
