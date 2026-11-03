@@ -81,7 +81,6 @@ export async function createCheckout(lines: { variantId: string; quantity: numbe
   console.log("Cart data:", JSON.stringify(data));
   console.log("API errors:", JSON.stringify(errors));
   console.log("User errors:", JSON.stringify(data?.cartCreate?.userErrors));
-  console.log("VariantId used:", variantId);
 
   if (errors) throw new Error(JSON.stringify(errors));
   if (data?.cartCreate?.userErrors?.length > 0) throw new Error(JSON.stringify(data.cartCreate.userErrors));
