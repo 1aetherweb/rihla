@@ -40,7 +40,7 @@ export const products: Product[] = [
     image: "/products/dawn-3.webp",
     images: ["/products/dawn-3.webp", "/products/dawn-5.png", "/products/dawn-4.webp"],
     sizes: ["XS", "S", "M", "L", "XL"],
-    description: "65% cotton, 35% polyester. Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
+    description: "100% cotton. Brushed fleece interior. Dropped shoulders. Embroidered chest logo.",
     variants: {
       XS: gid("49300798701722"),
       S:  gid("68064487866522"),
