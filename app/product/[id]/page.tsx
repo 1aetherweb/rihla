@@ -4,15 +4,26 @@ import Link from "next/link";
 import { products } from "@/lib/products";
 import SizeSelector from "@/components/SizeSelector";
 import ProductGallery from "@/components/ProductGallery";
+import { getVariantAvailability } from "@/lib/shopify";
 
 export function generateStaticParams() {
   return products.map((p) => ({ id: p.id }));
 }
 
+export const revalidate = 60;
+
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const product = products.find((p) => p.id === id);
   if (!product) notFound();
+
+  const variantIds = Object.values(product.variants ?? {});
+  const availability = variantIds.length > 0 ? await getVariantAvailability(variantIds) : {};
+  const soldOutSizes = product.variants
+    ? Object.entries(product.variants)
+        .filter(([, vid]) => availability[vid] === false)
+        .map(([size]) => size)
+    : [];
 
   return (
     <div className="max-w-7xl mx-auto px-6 pt-28 pb-24">
@@ -45,7 +56,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
               Sold Out
             </div>
           ) : (
-            <SizeSelector product={product} />
+            <SizeSelector product={product} soldOutSizes={soldOutSizes} />
           )}
 
           {/* Materials & Care */}

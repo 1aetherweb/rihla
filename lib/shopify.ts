@@ -55,6 +55,26 @@ export async function getProducts() {
   }));
 }
 
+export async function getVariantAvailability(variantIds: string[]): Promise<{ [variantId: string]: boolean }> {
+  const ids = variantIds.map((id) => `"${id}"`).join(", ");
+  const query = `
+    {
+      nodes(ids: [${ids}]) {
+        ... on ProductVariant {
+          id
+          availableForSale
+        }
+      }
+    }
+  `;
+  const { data } = await shopify.request(query);
+  const result: { [variantId: string]: boolean } = {};
+  for (const node of data?.nodes ?? []) {
+    if (node?.id) result[node.id] = node.availableForSale ?? false;
+  }
+  return result;
+}
+
 export async function createCheckout(lines: { variantId: string; quantity: number }[]) {
   const query = `
     mutation cartCreate($input: CartInput!) {

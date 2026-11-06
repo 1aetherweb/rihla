@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useCart } from "@/lib/cart";
 import type { Product } from "@/lib/products";
 
-export default function SizeSelector({ product }: { product: Product }) {
+export default function SizeSelector({ product, soldOutSizes = [] }: { product: Product; soldOutSizes?: string[] }) {
   const [selected, setSelected] = useState<string | null>(null);
   const [flash, setFlash] = useState(false);
   const [checkingOut, setCheckingOut] = useState(false);
@@ -42,19 +42,25 @@ export default function SizeSelector({ product }: { product: Product }) {
         </Link>
       </div>
       <div className="flex gap-2 flex-wrap mb-6">
-        {product.sizes.map((size) => (
-          <button
-            key={size}
-            onClick={() => setSelected(size)}
-            className={`text-xs tracking-widest uppercase px-4 py-2 border transition-colors ${
-              selected === size
-                ? "border-white bg-white text-black"
-                : "border-white/20 text-white/60 hover:border-white/50 hover:text-white"
-            }`}
-          >
-            {size}
-          </button>
-        ))}
+        {product.sizes.map((size) => {
+          const isSoldOut = soldOutSizes.includes(size);
+          return (
+            <button
+              key={size}
+              onClick={() => !isSoldOut && setSelected(size)}
+              disabled={isSoldOut}
+              className={`text-xs tracking-widest uppercase px-4 py-2 border transition-colors ${
+                isSoldOut
+                  ? "border-white/10 text-white/20 cursor-not-allowed line-through"
+                  : selected === size
+                  ? "border-white bg-white text-black"
+                  : "border-white/20 text-white/60 hover:border-white/50 hover:text-white"
+              }`}
+            >
+              {size}
+            </button>
+          );
+        })}
       </div>
 
       <div className="flex flex-col gap-3">
