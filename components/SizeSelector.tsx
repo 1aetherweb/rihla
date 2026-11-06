@@ -19,11 +19,13 @@ export default function SizeSelector({ product }: { product: Product }) {
   }
 
   async function handleBuyNow() {
-    if (!selected || !product.variantId) return;
+    if (!selected) return;
+    const variantId = product.variants?.[selected] ?? product.variantId;
+    if (!variantId) return;
     setCheckingOut(true);
     try {
       const { createCheckout } = await import("@/lib/shopify");
-      const url = await createCheckout([{ variantId: product.variantId!, quantity: 1 }]);
+      const url = await createCheckout([{ variantId, quantity: 1 }]);
       window.location.href = url;
     } catch (err) {
       console.error("Checkout error:", err);
@@ -70,7 +72,7 @@ export default function SizeSelector({ product }: { product: Product }) {
           {flash ? "Added to Cart ✓" : selected ? "Add to Cart" : "Select a Size"}
         </button>
 
-        {product.variantId && (
+        {(product.variants || product.variantId) && (
           <button
             onClick={handleBuyNow}
             disabled={!selected || checkingOut}

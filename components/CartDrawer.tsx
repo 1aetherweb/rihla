@@ -10,8 +10,11 @@ export default function CartDrawer() {
 
   async function handleCheckout() {
     const lines = items
-      .filter((i) => i.product.variantId)
-      .map((i) => ({ variantId: i.product.variantId!, quantity: i.quantity }));
+      .map((i) => ({
+        variantId: i.product.variants?.[i.size] ?? i.product.variantId ?? "",
+        quantity: i.quantity,
+      }))
+      .filter((l) => l.variantId !== "");
     if (lines.length === 0) return;
     setCheckingOut(true);
     try {
